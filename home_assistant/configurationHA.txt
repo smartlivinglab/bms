@@ -1,0 +1,60 @@
+# Încarcă configurațiile implicite (nu șterge asta)
+default_config:
+
+# Activează frontendul
+frontend:
+
+# Activează suportul pentru scripturi Python (dacă vrei să folosești python_scripts/)
+python_script:
+
+# Definește senzorul care citește ultima valoare din CSV
+# REST sensor principal (preia toate valorile ca atribute)
+sensor:
+  - platform: rest
+    name: "Arduino Sensor"
+    resource: "https://script.google.com/macros/s/AKfycbzlCZYkMbR36rmXfoUn9aYMvUMSecL8xKBGQ8PU14MFpsIb0OCKr53jVI2ZdNnP9b1s/exec"  # pune aici Web App-ul tău
+    json_attributes:
+      - value1
+      - value2
+      - value3
+      - value4
+      - value5
+      - value6
+      - value7
+      - value8
+      - timestamp
+    value_template: "{{ value_json.value1 }}"  # valoarea principală (poate fi oricare)
+    scan_interval: 10
+template:
+  - sensor:
+      - name: "Sensor Value1"
+        unit_of_measurement: "°C"  # sau altă unitate
+        state: "{{ state_attr('sensor.arduino_sensor', 'value1') }}"
+
+      - name: "Sensor Value2"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value2') }}"
+
+      - name: "Sensor Value3"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value3') }}"
+
+      - name: "Sensor Value4"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value4') }}"
+
+      - name: "Sensor Value5"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value5') }}"
+
+      - name: "Sensor Value6"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value6') }}"
+
+      - name: "Sensor Value7"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value7') }}"
+
+      - name: "Sensor Value8"
+        unit_of_measurement: "°C"
+        state: "{{ state_attr('sensor.arduino_sensor', 'value8') }}"

@@ -1,0 +1,50 @@
+type: vertical-stack
+cards:
+  - type: history-graph
+    title: Value1
+    entities:
+      - sensor.sensor_value1
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value2
+    entities:
+      - sensor.sensor_value2
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value3
+    entities:
+      - sensor.sensor_value3
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value4
+    entities:
+      - sensor.sensor_value4
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value5
+    entities:
+      - sensor.sensor_value5
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value6
+    entities:
+      - sensor.sensor_value6
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value7
+    entities:
+      - sensor.sensor_value7
+    hours_to_show: 24
+    refresh_interval: 10
+  - type: history-graph
+    title: Value8
+    entities:
+      - sensor.sensor_value8
+    hours_to_show: 24
+    refresh_interval: 10
